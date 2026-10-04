@@ -7,14 +7,14 @@ public:
         while (i >= 0 || j >= 0 || carry) {
             int sum = carry;
 
-            if (i >= 0) sum += a[i--] - '0'; // Convert char to int
+            if (i >= 0) sum += a[i--] - '0'; 
             if (j >= 0) sum += b[j--] - '0';
 
-            result += (sum % 2) + '0'; // Add binary digit to result
-            carry = sum / 2;           // Compute carry
+            result += (sum % 2) + '0'; 
+            carry = sum / 2;           
         }
 
-        reverse(result.begin(), result.end()); // Since we added from LSB to MSB
+        reverse(result.begin(), result.end()); 
         return result;
     }
 };
